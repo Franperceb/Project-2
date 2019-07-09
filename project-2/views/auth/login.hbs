@@ -1,8 +1,12 @@
-  
-<form action="/auth/login" method="post">
-  <label for="username">username</label>
-  <input type="text" name="username" id="username">
-  <label for="password">password</label>
-  <input type="password" name="password" id="password">
-  <button type="submit">Login</button>
-</form>
+<div class="signup">
+  {{#if err}}
+  <h2>{{err}}</h2>
+  {{else}}
+  <h2>Login</h2>
+  {{/if}}
+  <form action="/login" method="POST">
+    <input type="username" name="username" placeholder="username" required minlength="8" maxlength="8"/>
+    <input type="password" name="password" placeholder="Password"  required minlength="8" maxlength="8"/>
+    <input type="submit" value="Login">
+  </form>
+</div>
