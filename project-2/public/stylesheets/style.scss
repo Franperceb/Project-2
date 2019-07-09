@@ -16,9 +16,26 @@ a {
   flex-direction: row-reverse;
   flex-wrap: wrap;
   margin: auto;
-  padding-top: 60px;
-  // width: 100vw;
-  // height: 100vh;
+  padding-top: 78px;
+}
+
+.uk-navbar-container {
+  width: 100vw;
+  position: fixed;
+  z-index: 1;
+}
+
+.uk-navbar-nav{
+  justify-content: flex-end;
+}
+
+.uk-navbar-center{
+  display: flex;
+  justify-content: space-around;
+}
+
+.title{
+  font-family: 'Marcellus SC', serif;
 }
 
 .recipe {
@@ -29,11 +46,6 @@ a {
   margin: 10px;
   border-radius: 15px;
   box-shadow: 1px 1px 1px rgba(121, 120, 120, 0.103);
-}
-
-.uk-navbar-container {
-  position: fixed;
-  width: 100vw;
 }
 
 .recipe img {
@@ -81,4 +93,23 @@ a {
   color: whitesmoke;
 }
 
+@media(max-width: 768px){
+  .uk-flex {
+    flex-direction: column;
+    width: 100vw;
+    padding-top: 250px;
+  }
 
+  .recipe img {
+    height: 250px;
+  }
+
+  .recipe {
+    width: 90vw;
+    font-size: 18px
+  }
+
+  .like {
+    font-size: 18px;
+  }
+}
