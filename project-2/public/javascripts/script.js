@@ -1,5 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
+  console.log('IronGenerator JS imported successfully!')
+}, false)
 
-  console.log('IronGenerator JS imported successfully!');
+let likeButton = document.querySelector('.like')
 
-}, false);
+// likeButton.onclick(e) => {
+//   console.log('jjijijij')
+//   if(likeButton.getAttribute('class') === 'like'){
+//     likeButton.setAttribute('class', 'like selected')
+//   } else {
+//     likeButton.setAttribute('class', 'like')
+//   }
+// }
+
+ likeButton.onclick = function() {
+   likeButton.classList.toggle('selected')
+   alert('funciona')
+ }
+
+
+

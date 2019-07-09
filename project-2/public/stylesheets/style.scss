@@ -1,8 +1,84 @@
+* {
+  margin:0;
+  padding: 0; 
+}
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 12px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: rgb(241, 240, 240);
 }
 
 a {
   color: #00B7FF;
 }
+
+.uk-flex {
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  margin: auto;
+  padding-top: 60px;
+  // width: 100vw;
+  // height: 100vh;
+}
+
+.recipe {
+  width: 15%;
+  height: 9%;
+  text-align: center;
+  background: whitesmoke;
+  margin: 10px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 1px rgba(121, 120, 120, 0.103);
+}
+
+.uk-navbar-container {
+  position: fixed;
+  width: 100vw;
+}
+
+.recipe img {
+  border-radius: 15px;
+  width: 90%;
+  margin: 5px;
+}
+
+.recipe p {
+  font-weight: bold;
+  margin: 5px;
+  color: rgb(75, 74, 74);
+}
+
+.recipe:hover > .like {
+  cursor: pointer;
+  display: block;
+}
+
+.recipe:hover {
+  text-decoration: underline;
+  cursor: pointer
+}
+
+.like {
+  border-radius: 3px;
+  font-size: 12px;
+  padding: 5px 10px;
+  color: rgb(75, 74, 74);
+  border: none;
+  box-shadow: 1px 1px rgba(121, 120, 120, 0.103);
+  position: absolute;
+  margin: 10px 15px;
+  display: none;
+  outline: none;
+}
+
+.like:hover {
+  border: 2px solid rgba(121, 120, 120, 0.1);
+}
+
+.selected {
+  background: rgb(212, 70, 70);
+  border: 1px solid rgb(175, 56, 56);
+  color: whitesmoke;
+}
+
+

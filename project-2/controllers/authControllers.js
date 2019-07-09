@@ -3,7 +3,7 @@ const User = require('../models/User')
 
 
 exports.getSignup =  (req,res,next) =>{
-  res.render('auth/signup')
+  res.render('auth/signup', recipes)
 }
 
 exports.postSignup = async (req,res,next) => {
