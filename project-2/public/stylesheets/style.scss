@@ -16,7 +16,7 @@ a {
   flex-direction: row-reverse;
   flex-wrap: wrap;
   margin: auto;
-  padding-top: 84px;
+  padding-top: 105px;
   justify-content: space-around;
 }
 
@@ -24,6 +24,7 @@ a {
   width: 100vw;
   position: fixed;
   z-index: 1;
+  box-shadow: 3px 3px 3px rgba(121, 120, 120, 0.103);
 }
 
 .uk-navbar-nav{
@@ -36,7 +37,7 @@ a {
 }
 
 .title{
-  font-family: 'Marcellus SC', serif;
+  font-family: 'Rubik Mono One', sans-serif;
 }
 
 .recipe {
@@ -52,7 +53,7 @@ a {
 .recipe img {
   border-radius: 15px;
   width: 90%;
-  margin: 5px;
+  margin:  2px 5px;
   padding: 5px;
 }
 
