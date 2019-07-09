@@ -1,27 +1,19 @@
-const passport = require('../config/passport')
 const {Router} = require('express')
 const router = Router()
-const {isLoggedIn, isAuth} = require('../middlewares/auth')
-const {  
-  getSignup, 
-   getLogin,
-     postSignup,
-     postLogin,
-     profile,
-      logout
-} = require('../controllers/authControllers')
+const axios = require('axios')
+const Recipe = require('../models/Recipe')
 
 //homepage
-router.get('/', (req, res, next) => {
-  res.render('index')
+router.get('/', (req, res, next) => { 
+    Recipe.find()
+    .then(recipess => {
+      res.render('index', {recipess})
+    })
+    .catch(err => console.log(err))
 })
 
-router.get('/auth/signup', getSignup)
-router.post('/auth/signup', postSignup)
-router.get('/auth/login', getLogin)
-router.post('/auth/login', postLogin)
-router.get('/logout', logout)
-router.get('/profile', profile )
+
+
 
 
 module.exports = router

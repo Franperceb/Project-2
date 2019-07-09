@@ -1,5 +1,9 @@
-<h1>{{title}}</h1>
-<p>Home Page</p>
-<a href="/auth/login" class="">Login</a>
-<a href="/auth/signup" class="">Signup</a>
-<a href="/logout" class="">Logout</a>
+  <div class="uk-flex">
+    {{#each recipess}}
+      {{> recipeDetailPartial}}
+    {{/each}}
+  </div>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="/javascripts/APIHandler.js"></script>
+ 

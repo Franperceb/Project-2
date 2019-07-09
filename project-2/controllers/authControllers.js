@@ -10,6 +10,7 @@ exports.postSignup = async (req, res, next) => {
 }
 exports.getLogin = (req, res, next) => res.render('auth/login')
 
+<<<<<<< HEAD
 exports.postLogin = passport.authenticate('local', {
   failureRedirect: '/login',
   successRedirect: '/profile'
@@ -18,6 +19,12 @@ exports.getProfile = (req, res, next) => res.render('auth/profile', { user: req.
 exports.logout = (req,res,next) => {
    req.logout()
    res.redirect('/')
+=======
+
+
+exports.getSignup =  (req,res,next) =>{
+  res.render('auth/signup', recipes)
+>>>>>>> 3a551199db7e11c9855a65419f676c334d802517
 }
 
 

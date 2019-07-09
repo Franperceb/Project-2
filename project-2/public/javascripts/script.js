@@ -1,5 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
+  console.log('IronGenerator JS imported successfully!')
+}, false)
 
-  console.log('IronGenerator JS imported successfully!');
+let likeButtons = document.querySelectorAll('.like')
 
-}, false);
+likeButtons.forEach(button => {
+  button.onclick = (e) => {
+  if(button.getAttribute('class') === 'like'){
+    button.setAttribute('class', 'like selected')
+  } else {
+    button.setAttribute('class', 'like')
+  }
+    console.log('si funciona')
+  }
+})

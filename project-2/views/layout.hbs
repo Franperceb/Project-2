@@ -5,12 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>{{title}}</title>
+  <link href="https://fonts.googleapis.com/css?family=Marcellus+SC&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.6/css/uikit.min.css" />
   <link rel="stylesheet" href="/stylesheets/style.css" />
 </head>
 <body>
 
+<nav class="uk-navbar-container" uk-navbar>
+  <div class="uk-navbar-center uk-width-1-1">
+    <div class="uk-navbar-item">
+      <form class="uk-search uk-search-default uk-width-medium">
+        <span uk-search-icon></span>
+        <input class="uk-search-input" type="search" placeholder="Search...">
+      </form>
+    </div>
+
+    <div class = "uk-navbar-item">
+      <h2 class = "title">Recipes4You</h2>
+    </div>
+
+    <ul class="uk-navbar-nav">
+        <li class="uk-active"><a href="/auth/login">Login</a></li>
+        <li class="uk-active"><a href="/auth/signup">Signup</a></li>
+        <li><a href="/logout">Logout</a></li>
+    </ul>
+  </div>
+</nav>
+
+
   {{{body}}}
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.6/js/uikit.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.6/js/uikit-icons.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js" integrity="sha256-XmdRbTre/3RulhYk/cOBUMpYlaAp2Rpo/s556u0OIKk=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="/javascripts/APIHandler.js"></script>
   <script src="/javascripts/script.js"></script>
-</body>
+</script>
 </html>
