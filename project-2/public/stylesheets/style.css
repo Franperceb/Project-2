@@ -13,7 +13,8 @@ a {
   flex-direction: row-reverse;
   flex-wrap: wrap;
   margin: auto;
-  padding-top: 78px; }
+  padding-top: 84px;
+  justify-content: space-around; }
 
 .uk-navbar-container {
   width: 100vw;
@@ -35,19 +36,20 @@ a {
   height: 9%;
   text-align: center;
   background: whitesmoke;
-  margin: 10px;
   border-radius: 15px;
   box-shadow: 1px 1px 1px rgba(121, 120, 120, 0.103); }
 
 .recipe img {
   border-radius: 15px;
   width: 90%;
-  margin: 5px; }
+  margin: 5px;
+  padding: 5px; }
 
 .recipe p {
   font-weight: bold;
   margin: 5px;
-  color: #4b4a4a; }
+  color: #4b4a4a;
+  padding: 5px 10px; }
 
 .recipe:hover > .like {
   cursor: pointer;
