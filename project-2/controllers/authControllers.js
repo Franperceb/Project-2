@@ -6,7 +6,7 @@ exports.postSignup = async (req, res, next) => {
   const user = await User.register({ ...req.body }, req.body.password)
   //Feedback
  console.log('The user registered:', user)
-  res.redirect('/login')
+  res.redirect('/')
 }
 exports.getLogin = (req, res, next) => res.render('auth/login')
 

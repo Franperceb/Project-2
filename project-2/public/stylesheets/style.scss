@@ -117,3 +117,35 @@ a {
     font-size: 18px;
   }
 }
+
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.signup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.signup form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 50%;
+  height: 20%;
+}
+.eye{
+  background: none;
+  border: none;
+  outline: none;
+}
+

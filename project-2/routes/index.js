@@ -7,11 +7,13 @@ const Recipe = require('../models/Recipe')
 
 router.get('/', (req, res, next) => {
   Recipe.find()
-    .then(recipess => {
-      res.render('index', {recipess})
-    })
-    .catch(err => console.log(err))
+  .then(recipess => {
+    res.render('index',{recipess})
+  })
+  .catch(err => console.log(err))
 })
+
+router.get('/', (req, res, next) => res.render('index'))
 
 router.get('/signup', getSignup)
 router.post('/signup', catchErrors(postSignup))
