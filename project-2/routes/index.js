@@ -3,6 +3,15 @@ const { getSignup, postSignup, getLogin, postLogin, getProfile, logout } = requi
 const { catchErrors } = require('../middlewares/handlers')
 const { isLoggedIn } = require('../middlewares/auth')
 const passport = require('passport')
+const Recipe = require('../models/Recipe')
+
+router.get('/', (req, res, next) => {
+  Recipe.find()
+  .then(recipess => {
+    res.render('index',{recipess})
+  })
+  .catch(err => console.log(err))
+})
 
 router.get('/', (req, res, next) => res.render('index'))
 

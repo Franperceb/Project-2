@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="/stylesheets/style.css" />
 </head>
 <body>
-
+<header>
 <nav class="uk-navbar-container" uk-navbar>
   <div class="uk-navbar-center uk-width-1-1">
     <div class="uk-navbar-item">
@@ -22,16 +22,27 @@
     </div>
 
     <div class = "uk-navbar-item">
-      <h2 class = "title">Recipes4You</h2>
+      <h2> <a href="/" class = "title">Recipes4You </a>  </h2>
+      
     </div>
 
     <ul class="uk-navbar-nav">
-        <li class="uk-active"><a href="/auth/login">Login</a></li>
-        <li class="uk-active"><a href="/auth/signup">Signup</a></li>
-        <li><a href="/logout">Logout</a></li>
+
+     {{#if loggedUser}}
+        <li class="uk-active"><a href="/profile">Profile</a></li>
+        <li class="uk-active"><a href="/logout">Logout</a></li>
+        {{else}}
+        <li class="uk-active"><a href="/login">Login</a></li>
+        <li class="uk-active"><a href="/signup">Signup</a></li>
+        <a href="/logout">Logout</a>
+         {{/if}}
+    
     </ul>
   </div>
 </nav>
+</header>
+      
+    
 
 
   {{{body}}}
