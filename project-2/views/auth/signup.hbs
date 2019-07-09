@@ -1,7 +1,54 @@
-<form action="/auth/signup" method="post">
-  <label for="username">username</label>
-  <input type="text" name="username" id="username">
-  <label for="password">password</label>
-  <input type="password" name="password" id="password">
-  <button type="submit">Signup</button>
-</form>
+<div class="signup">
+  <h2>Signup</h2>
+  <form action="/signup" method="POST">
+    <input type="username" name="username" placeholder="username" required minlength="8" maxlength="12" />
+    <input type="email" name="email" placeholder="Email" />
+    <input type="password" name="password" placeholder="Password" id="pass" required minlength="8" maxlength="12" />
+    <button type="button"   class="eye" onclick="showpass()"><i class="far fa-eye"></i></button>
+    <input type="submit" value="Register">
+  </form>
+    <p class="strength " id ="length"></p>
+
+<a href="/auth/google">Sign In with Google</a>
+
+
+
+<script>
+    pass.addEventListener('keyup',function(){
+      strengthBar()
+    })
+function strengthBar(){
+  let value = document.getElementById('pass').value
+  let status = document.getElementById('length')
+  let counter= 0
+
+  if(value!=""){
+    if(value.length <= 2)
+    counter=1
+    if(value.length > 4 &&  value.length <= 8)
+    counter=2
+    if(value.length > 8 &&  value.length <= 12)
+    counter=3
+
+    if(counter ==1){
+      status.innerHTML ="Weak";
+      status.style.background="#fa6775"
+      status.style.color ="#ffffff"
+    }
+
+    if(counter ==2){
+      status.innerHTML ="Good";
+      status.style.background="yellow"
+      status.style.color ="#ffffff"
+    }
+
+    if(counter ==3){
+      status.innerHTML ="Excellent";
+      status.style.background="#89da59"
+      status.style.color ="#ffffff"
+    }
+    
+  }
+}
+
+</script>
