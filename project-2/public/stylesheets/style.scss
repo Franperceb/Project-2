@@ -148,3 +148,38 @@ a {
   outline: none;
 }
 
+
+.schedule{
+    display: flex;
+    justify-content:  space-around;
+    height: 600px;
+}
+
+.schedule-cont{
+  width: 250px;
+  height: 450px;
+}
+
+.schedule-cont p {
+  font-size: 25px;
+  text-align: center;
+}
+.schedule-cont > div{
+  border: 1px solid black;
+  width:230px;
+  height: 140px;
+}
+.food-day{
+  display: inherit;
+  flex-direction: column;
+  justify-content: space-around;
+  height:420px;
+}
+
+.food-day p{
+  font-size: 20px;
+}
+.title-sched{
+ text-align: center;
+ padding-top: 80px;
+}

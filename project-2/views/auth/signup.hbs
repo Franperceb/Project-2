@@ -1,12 +1,32 @@
 <div class="signup">
   <h2>Signup</h2>
   <form action="/signup" method="POST">
-    <input type="username" name="username" placeholder="username" required minlength="8" maxlength="12" />
-    <input type="email" name="email" placeholder="Email" />
-    <input type="password" name="password" placeholder="Password" id="pass" required minlength="8" maxlength="12" />
-    <button type="button"   class="eye" onclick="showpass()"><i class="far fa-eye"></i></button>
-    <input type="submit" value="Register">
-  </form>
+    <input 
+    type="username"
+     name="username" 
+     placeholder="username"/>
+    <input 
+    type="email"
+    name="email"
+    placeholder="Email" />
+    
+    <input
+     type="password" 
+     name="password" 
+     placeholder="Password" 
+     id="pass" />
+  
+
+    <button
+     type="button"  
+    class="eye" 
+    onclick="showpass()"><i class="far fa-eye"></i></button>
+    
+    <input 
+    type="submit"
+    value="Register">
+ 
+</form>
     <p class="strength " id ="length"></p>
 
 <a href="/auth/google">Sign In with Google</a>

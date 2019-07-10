@@ -25,6 +25,10 @@ router.get('/profile', isLoggedIn, getProfile)
 
 router.get('/logout', logout)
 
+router.get('/schedule', (req,res,next)=>{
+  res.render('schedule')
+})
+
 //google
 /*
 router.get('/auth/google',

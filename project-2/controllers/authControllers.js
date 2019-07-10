@@ -4,8 +4,7 @@ const passport = require('passport')
 exports.getSignup = (req, res, next) => res.render('auth/signup')
 exports.postSignup = async (req, res, next) => {
   const user = await User.register({ ...req.body }, req.body.password)
-  //Feedback
- console.log('The user registered:', user)
+  console.log('The user registered:', user)
   res.redirect('/')
 }
 exports.getLogin = (req, res, next) => res.render('auth/login')
@@ -19,7 +18,6 @@ exports.logout = (req,res,next) => {
    req.logout()
    res.redirect('/')
 }
-
 
 
 
