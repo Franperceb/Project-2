@@ -64,11 +64,9 @@ hbs.registerPartials(`${__dirname}/views/partials`)
 // default value for title local
 app.locals.title = 'Recipes4You';
 
-
-
 const index = require('./routes/index');
 app.use('/', index);
-
+app.use('/recipes', require('./routes/recipesRoutes'));
 
 
 module.exports = app;

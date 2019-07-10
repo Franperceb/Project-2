@@ -13,8 +13,6 @@ router.get('/', (req, res, next) => {
   .catch(err => console.log(err))
 })
 
-router.get('/', (req, res, next) => res.render('index'))
-
 router.get('/signup', getSignup)
 router.post('/signup', catchErrors(postSignup))
 
@@ -24,6 +22,17 @@ router.post('/login', postLogin)
 router.get('/profile', isLoggedIn, getProfile)
 
 router.get('/logout', logout)
+
+
+// router.get('/calories', (req, res, next) => {
+//    Recipe.find()
+//    .then(recipes => {
+//      recipes.forEach(e => {
+//        e.update({calories: calories.toFixed(2), {new: true})
+//      })
+//    })
+//    .catch(err => console.log(err))
+//   })
 
 //google
 /*
@@ -35,6 +44,7 @@ router.get('/auth/google/callback',
   function(req, res) {
     res.redirect('/profile');
   });*/
+
 module.exports = router
 
 

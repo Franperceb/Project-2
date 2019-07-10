@@ -29,8 +29,13 @@ a {
   display: flex;
   justify-content: space-around; }
 
-.title {
-  font-family: 'Rubik Mono One', sans-serif; }
+.title a {
+  font-family: 'Marcellus SC', serif;
+  color: black;
+  text-decoration: none; }
+
+.title2 {
+  font-size: 50px; }
 
 .recipe {
   width: 15%;
@@ -79,6 +84,16 @@ a {
   background: #d44646;
   border: 1px solid #af3838;
   color: whitesmoke; }
+
+.padding {
+  padding-top: 105px; }
+
+.recipe-image {
+  width: 300px;
+  height: 300px; }
+
+.uk-card-body > h3 {
+  font-family: 'Marcellus SC', serif; }
 
 @media (max-width: 768px) {
   .uk-flex {

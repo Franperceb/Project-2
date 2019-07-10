@@ -1,9 +1,7 @@
-document.addEventListener('DOMContentLoaded', () => {
-  console.log('IronGenerator JS imported successfully!')
-}, false)
-
 let likeButtons = document.querySelectorAll('.like')
+let recipes = document.querySelectorAll('.recipe')
 
+//Change button style with likes
 likeButtons.forEach(button => {
   button.onclick = (e) => {
   if(button.getAttribute('class') === 'like'){
@@ -15,24 +13,22 @@ likeButtons.forEach(button => {
   }
 })
 
-document.addEventListener('DOMContentLoaded', () => {
-
-  console.log('IronGenerator JS imported successfully!');
-
-}, false);
-
-
-
-  //pasword  hide and show
-
-  function showpass(){
-    let password = document.getElementById('pass')
+// //Recipe click
+// recipes.forEach(recipe => {
+//   recipe.onclick = (e) => {
+//     let id = recipe.querySelector('.id').innerText
     
-    if(password.type == "text")
-      password.type = "password"
-      else{
-        password.type = "text"
-      }
+//   }
+// })
+
+//Password  hide and show
+function showpass(){
+  let password = document.getElementById('pass')
   
-  }
+  if(password.type == "text")
+    password.type = "password"
+    else{
+      password.type = "text"
+    }
+}
   

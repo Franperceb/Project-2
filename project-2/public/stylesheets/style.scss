@@ -1,3 +1,5 @@
+// font-family: 'Rubik Mono One', sans-serif;
+
 * {
   margin:0;
   padding: 0; 
@@ -36,8 +38,14 @@ a {
   justify-content: space-around;
 }
 
-.title{
-  font-family: 'Rubik Mono One', sans-serif;
+.title a{
+  font-family: 'Marcellus SC', serif;
+  color: black;
+  text-decoration: none;
+}
+
+.title2{
+  font-size: 50px;
 }
 
 .recipe {
@@ -96,6 +104,20 @@ a {
   border: 1px solid rgb(175, 56, 56);
   color: whitesmoke;
 }
+
+.padding {
+  padding-top: 105px; 
+}
+
+.recipe-image {
+  width: 300px;
+  height: 300px;
+}
+
+.uk-card-body > h3 {
+  font-family: 'Marcellus SC', serif;
+}
+
 
 @media(max-width: 768px){
   .uk-flex {

@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>{{title}}</title>
+  <link href="https://fonts.googleapis.com/css?family=Marcellus+SC|Rubik+Mono+One&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Rubik+Mono+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.6/css/uikit.min.css" />
   <link rel="stylesheet" href="/stylesheets/style.css" />
@@ -14,15 +15,14 @@
 <nav class="uk-navbar-container" uk-navbar>
   <div class="uk-navbar-center uk-width-1-1">
     <div class="uk-navbar-item">
-      <form class="uk-search uk-search-default uk-width-medium">
+      <form class="uk-search uk-search-default uk-width-medium" action = "/recipes/search">
         <span uk-search-icon></span>
-        <input class="uk-search-input" type="search" placeholder="Search...">
+        <input class="uk-search-input" type="search" placeholder="Search..." name="query">
       </form>
     </div>
 
     <div class = "uk-navbar-item">
-      <h2> <a href="/" class = "title">Recipes4You </a>  </h2>
-      
+      <h2 class = "title"> <a href="/">Recipes<span class = "title2">4</span>You </a></h2>
     </div>
 
     <ul class="uk-navbar-nav">
@@ -33,16 +33,13 @@
         {{else}}
         <li class="uk-active"><a href="/login">Login</a></li>
         <li class="uk-active"><a href="/signup">Signup</a></li>
-        <a href="/logout">Logout</a>
+        <li><a href="/logout">Logout</a></li>
          {{/if}}
     
     </ul>
   </div>
 </nav>
-</header>
-      
-    
-
+</header>   
 
   {{{body}}}
   <script src="https://kit.fontawesome.com/ecfc5cc83e.js"></script>
