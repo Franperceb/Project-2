@@ -7,6 +7,7 @@ const passport = require('passport')
 const Recipe = require('../models/Recipe')
 
 router.get('/', (req, res, next) => {
+  console.log('wtf')
   Recipe.find()
   .then(recipess => {
     res.render('index',{recipess})
@@ -28,23 +29,7 @@ router.get('/schedule', (req,res,next)=>{
   res.render('schedule')
 })
 
-
-
-
-
-
-// router.get('/calories', (req, res, next) => {
-//    Recipe.find()
-//    .then(recipes => {
-//      recipes.forEach(e => {
-//        e.update({calories: calories.toFixed(2), {new: true})
-//      })
-//    })
-//    .catch(err => console.log(err))
-//   })
-
 //google
-
 router.get('/auth/google',
     passport.authenticate('google', { scope: ['https://www.googleapis.com/auth/plus.login'] }));
 

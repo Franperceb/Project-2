@@ -24,28 +24,20 @@
             {{/each}}
             </ul>
 
+          <h2>Comments</h2>
+          {{#each recipe.comments}}
+          <div> 
+          <p> {{this.comment}} </p>
+          </div>
+          {{/each}}
 
- 
-  <h2>Comments</h2>
-
-    {{#each comments}}
-    <div> 
-    <p>{{this.user}}</p>  
-    <p> {{this.comment}} </p>
-     </div>
-    {{/each}}
-
-<h2> Add comment</h2>
-<form action="/recipes/{{_id}}" method="POST">
-    <label for="comment">Content</label>
-    <textarea name="comment" rows="5" cols="40" placeholder="Write here!"></textarea>
-  <input type="submit" value="Submit">
-</form>
-
-<a href="/">Go back</a>
-       
-       
-       
+          <h2> Add comment</h2>
+          <form action="/recipes/{{recipe._id}}" method="POST">
+              <label for="comment">Content</label>
+              <textarea name="comment" rows="5" cols="40" placeholder="Write here!"></textarea>
+            <input type="submit" value="Submit">
+          </form>
+          <a href="/">Go back</a>    
         </div>
     </div>
 </div>

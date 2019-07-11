@@ -7,15 +7,14 @@ const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 passport.use(User.createStrategy())
 passport.serializeUser(User.serializeUser())
 passport.deserializeUser(User.deserializeUser())
-//google  Strategy
 
+//google  Strategy
 passport.serializeUser((user,done)=>{
   done(null,user.id)
 })
 passport.deserializeUser((id,done)=>{
  User.findById(id).then((user)=>{
    done(null,user.id)
-
  })
 })
 
@@ -43,14 +42,7 @@ passport.use(new GoogleStrategy({
         })
     }
   })
- 
- 
- 
 }  
 ));
-
-
-
-
 
 module.exports = passport

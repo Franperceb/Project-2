@@ -26,20 +26,12 @@ exports.searchRecipes = (req, res, next) => {
 }
 
 exports.commentRecipe = async (req,res,next) =>{
-   const {id} = req.params
+   const { id } = req.params
    const {comment}= req.body
    try{
-      await Recipe.findByIdAndUpdate(id , {  
-        $push: {
-         comments:{ 
-            comment,
-            user: this.user,
-            commentId: id
-         }
-        }
-      })
-      res.redirect(`/recipes/${id}`)
-
+      await Recipe.findByIdAndUpdate(id , {$push: {comments:{comment, commentId: id}}
+   })
+  res.redirect(`/recipes/${id}`)
    }catch(err){
     console.log(err)
    }
