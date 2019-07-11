@@ -22,6 +22,7 @@ exports.getUpdateRecipe = (req, res) => {
 exports.postUpdateRecipe = (req, res) => {
   let { id } = req.params;
   console.log(id)
+    
   Recipe.findByIdAndUpdate(id, { ...req.body }, { new: true })
   .then(recipe => {
     console.log(recipe.name)
