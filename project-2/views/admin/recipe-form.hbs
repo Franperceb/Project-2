@@ -34,10 +34,15 @@
         </div>
           <label for="servings" class = "cardText">Servings:</label>
           <input name = "servings" type="number" placeholder="Servings" class = "cardText servingsInput" value = {{servings}}>
-        <p class = "cardText">Ingredients</p>
-        <ul class = "cardText ingredientsList">
+          <div class="addIngredientButton">
+          <p class = "cardText">Ingredients</p><a href="#" class = "addIngredient"><span uk-icon="plus-circle"></span></a>
+          </div>
+        <ul class = "cardText ingredientsList editList">
         {{#each ingredients as |ingredient|}}
-          <li><input name = "ingredients" type="text" placeholder="Ingredient" value = "{{ingredient}}" class = "cardText ingredientInput"></li>
+        {{!-- <div class="deleteIngredientButton"> --}}
+          <li class = "listElement"><input name = "ingredients" type="text" placeholder="Ingredient" value = "{{ingredient}}" class = "cardText ingredientInput"></li>
+          {{!-- <span uk-icon="minus-circle" class = "deleteLi"></span> --}}
+        {{!-- </div> --}}
         {{/each}}
         </ul>
         <label for="instructions" class = "cardText">Directions URL:</label>

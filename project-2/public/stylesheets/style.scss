@@ -11,8 +11,9 @@ body {
 }
 
 a {
-  color: rgb(0, 204, 255);
+  color: rgb(0, 204, 255)
 }
+
 
 .uk-flex {
   flex-direction: row-reverse;
@@ -123,7 +124,7 @@ a {
 }
 
 .titleAndButtons > h3 > input {
-  width: 500px;
+  width: 40vw;
   height: 30px;
   font-size: 20px;
 }
@@ -176,31 +177,53 @@ a {
 }
 
 .ingredientsList {
-  width: 70%;
+  //width: 70%;
+  margin-top: 0;
 }
 
 .servingsInput {
-  width: 40px;
+  width: 10%;
+  text-align: center;
 }
 
 .ingredientInput {
-  width: 350px;
+  width: 70%;
 }
 
 .urlInput {
-  width: 550px;
+  width: 75%;
 }
 
 .saveButton {
   margin-top: 20px;
   margin-left: 40%;
   font-family: 'Marcellus SC', serif;
-  border-radius: 15px;
-  padding: 5px 20px;
+  border-radius: 10px;
+  padding: 8px 20px;
+  border: none;
 }
 
 .saveButton:hover {
   cursor: pointer;
+}
+
+.addIngredientButton {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+
+.addIngredientButton > a {
+  margin-left: 10px;
+  color: #666;
+
+}
+
+.deleteIngredientButton {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  width: 90vw;
 }
 
 @media(max-width: 768px){
@@ -221,6 +244,19 @@ a {
 
   .like {
     font-size: 18px;
+  }
+
+  .titleAndButtons > h3 > input {
+    width: 80vw;
+  }
+
+  .ingredientInput {
+    width: 55vw;
+  }
+
+  .uk-card-media-left {
+    width: 100vw;
+    margin-top: 10px;
   }
 }
 

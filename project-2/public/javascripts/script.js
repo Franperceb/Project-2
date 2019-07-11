@@ -24,6 +24,27 @@ function showpass(){
     }
 }
 
+//Add ingredient in edit page
+const add = document.querySelector('.addIngredient')
+const ingredientList = document.querySelector('.ingredientsList')
+
+add.onclick = e => {
+  const li = document.createElement("li")
+  let input = document.createElement("input")
+  input.type = "text"
+  input.name = "ingredients"
+  input.className = "cardText ingredientInput"
+  li.appendChild(input)
+  ingredientList.appendChild(li)
+}
+
+//delete ingredients in edit page
+// const listElement = document.querySelector('.listElement')
+
+// listElement.ondbclick = e => {
+//   const li = listElement 
+//   ingredientList.removeChild(li)
+// }
 
 // function getFilteredData(){
 //   let url = 
