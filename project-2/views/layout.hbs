@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>{{title}}</title>
+  <link href="https://fonts.googleapis.com/css?family=Literata|Roboto&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Marcellus+SC|Rubik+Mono+One&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Rubik+Mono+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.6/css/uikit.min.css" />
   <link rel="stylesheet" href="/stylesheets/style.css" />
 </head>
@@ -26,22 +26,21 @@
     </div>
 
     <ul class="uk-navbar-nav">
-
-     {{#if loggedUser}}
+      {{#if loggedUser}}
         <li class="uk-active"><a href="/profile">Profile</a></li>
         <li class="uk-active"><a href="/logout">Logout</a></li>
         {{else}}
         <li class="uk-active"><a href="/login">Login</a></li>
         <li class="uk-active"><a href="/signup">Signup</a></li>
-        <li><a href="/logout">Logout</a></li>
-         {{/if}}
-    
+        {{!-- <a><a href="/logout">Logout</a></a> --}}
+      {{/if}}
     </ul>
+
   </div>
 </nav>
 </header>   
 
-  {{{body}}}
+    {{{body}}}
   <script src="https://kit.fontawesome.com/ecfc5cc83e.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.6/js/uikit.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.6/js/uikit-icons.min.js"></script>

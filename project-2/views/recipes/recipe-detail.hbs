@@ -2,21 +2,40 @@
 <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
     <div class="uk-card-media-left uk-cover-container">
       <div class="recipe-image">
-        <img src="{{image}}" alt="recipe image" uk-cover>
+        <img src="{{recipe.image}}" alt="recipe image" class = "recipe-image1" uk-cover>
       </div>
     </div>
     <div>
         <div class="uk-card-body">
-            <h3 class="uk-card-title">{{title}}</h3>
-              <p>Calories: {{calories}}</p>
-              <p>Servings: {{servings}}</p>
-            <p>Ingredients</p>
-            <ul>
-            {{#each ingredients as |ingredient|}}
+            <div class="titleAndButtons">
+              <h3 class="uk-card-title">{{recipe.title}}</h3>
+              {{#if isAdmin}}
+                <div class="adminButtons">
+                  <a href="/admin/{{recipe._id}}/updateRecipe" class="uk-icon-button" uk-icon='file-edit'></a>
+                  <a href="/admin/{{recipe._id}}/deleteRecipe" class="uk-icon-button" uk-icon='trash'></a>
+                </div>
+              {{/if}}
+            </div>
+              <p class = "cardTitle">Servings: {{recipe.servings}}</p>
+            <p class = "cardTitle">Ingredients</p>
+            <ul class = "cardText ingredientsList">
+            {{#each recipe.ingredients as |ingredient|}}
               <li>{{ingredient}}</li>
             {{/each}}
             </ul>
-            
+            <p class = "cardText">For directions, please click <a href="{{recipe.instructions}}" target = "_blank">here.</a></p>
+
+            <div class="label-container">
+              {{#each recipe.healthLabels as |hlabel|}}
+                <span class="uk-label uk-label-success">{{hlabel}}</span>
+              {{/each}}
+              {{#each recipe.dietLabels as |dlabel|}}
+                <span class="uk-label uk-label-default">{{dlabel}}</span>
+              {{/each}}
+              {{#each recipe.cautions as |caution|}}
+                <span class="uk-label uk-label-warning">{{caution}}</span>
+              {{/each}}
+            </div>
         </div>
     </div>
 </div>

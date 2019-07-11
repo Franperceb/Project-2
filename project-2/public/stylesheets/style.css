@@ -7,7 +7,7 @@ body {
   background: #f1f0f0; }
 
 a {
-  color: #00B7FF; }
+  color: #00ccff; }
 
 .uk-flex {
   flex-direction: row-reverse;
@@ -92,8 +92,75 @@ a {
   width: 300px;
   height: 300px; }
 
-.uk-card-body > h3 {
+.recipe-image1 {
+  border-radius: 20px; }
+
+.titleAndButtons > h3, .titleAndButtons > h3 > input {
   font-family: 'Marcellus SC', serif; }
+
+.titleAndButtons > h3 > input {
+  width: 500px;
+  height: 30px;
+  font-size: 20px; }
+
+.uk-card-media-left {
+  width: 45%; }
+
+.adminButtons {
+  display: flex;
+  justify-content: left;
+  margin-left: 10px;
+  padding: 0; }
+
+.uk-icon-button {
+  margin: 0 5px; }
+
+.cardText {
+  font-family: 'Literata', serif; }
+
+.cardTitle {
+  font-family: 'Literata', serif;
+  font-size: 14px; }
+
+.uk-label-success {
+  background: olivedrab; }
+
+.uk-label-warning {
+  background: #df8817; }
+
+.uk-label-default {
+  background: #0a67d1; }
+
+.uk-label {
+  margin: 5px 2px; }
+
+.titleAndButtons {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start; }
+
+.ingredientsList {
+  width: 70%; }
+
+.servingsInput {
+  width: 40px; }
+
+.ingredientInput {
+  width: 350px; }
+
+.urlInput {
+  width: 550px; }
+
+.saveButton {
+  margin-top: 20px;
+  margin-left: 40%;
+  font-family: 'Marcellus SC', serif;
+  border-radius: 15px;
+  padding: 5px 20px; }
+
+.saveButton:hover {
+  cursor: pointer; }
 
 @media (max-width: 768px) {
   .uk-flex {

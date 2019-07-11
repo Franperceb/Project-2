@@ -66,7 +66,8 @@ app.locals.title = 'Recipes4You';
 
 const index = require('./routes/index');
 app.use('/', index);
-app.use('/recipes', require('./routes/recipesRoutes'));
+app.use('/recipes', require('./routes/recipesRoutes'))
+app.use('/admin', require('./routes/adminRoutes'))
 
 
 module.exports = app;

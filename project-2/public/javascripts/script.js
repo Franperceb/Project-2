@@ -13,14 +13,6 @@ likeButtons.forEach(button => {
   }
 })
 
-// //Recipe click
-// recipes.forEach(recipe => {
-//   recipe.onclick = (e) => {
-//     let id = recipe.querySelector('.id').innerText
-    
-//   }
-// })
-
 //Password  hide and show
 function showpass(){
   let password = document.getElementById('pass')
@@ -31,4 +23,13 @@ function showpass(){
       password.type = "text"
     }
 }
-  
+
+
+// function getFilteredData(){
+//   let url = 
+//   axios.get(url)
+//   .then(res => {
+
+//   })
+//   .catch(err => console.log(err))
+// }

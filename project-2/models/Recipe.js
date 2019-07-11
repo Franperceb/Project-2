@@ -23,6 +23,7 @@ const recipeSchema = new Schema ({
   },
   image: {
     type: String,
+    default: 'https://img.freepik.com/free-photo/food-background-food-concept-with-various-tasty-fresh-ingredients-cooking-italian-food-ingredients-view-from-with-copy-space_1220-1491.jpg?size=626&ext=jpg',
     required: true
   },
   healthLabels: {
@@ -36,6 +37,9 @@ const recipeSchema = new Schema ({
   cautions: {
     type: [String],
     required: true
+  },
+  likes: {
+    type: [String]
   }
 },{
   timestamps: true,
