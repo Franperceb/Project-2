@@ -1,25 +1,3 @@
-{{!-- <form action="/admin/{{_id}}/updateRecipe" method="POST" class = "padding">
-
-<p>
-  <label for="name">Title</label>
-  <input type="text" name = "title" placeholder="Name" id = "name" value = "{{title}}">
-</p>
-
-<p>
-  <label for="ingredients">Ingredients</label>
-  <ul>
-  {{#each ingredients as |ingredient|}}
-    <li><input name = "ingredients" type="text" placeholder="Ingredient" value = "{{ingredient}}" class = "input"></li>
-  {{/each}}
-  </ul>
-  <label for="calories">Calories</label>
-  <input name = "calories" type="text" placeholder="Calories" value = {{calories}}>
-</p>
-
-<input type="submit" value = "SAVE">
-</form> --}}
-
-
 <form action="/admin/{{_id}}/updateRecipe" method="POST" class = "padding">
   <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
     <div class="uk-card-media-left uk-cover-container">
@@ -34,9 +12,14 @@
         </div>
           <label for="servings" class = "cardText">Servings:</label>
           <input name = "servings" type="number" placeholder="Servings" class = "cardText servingsInput" value = {{servings}}>
+          
+          <label for="calories" class = "cardText">Calories</label>
+          <input name = "calories" type="text" placeholder="Calories" class = "cardText" value = {{calories}}>
+          
           <div class="addIngredientButton">
           <p class = "cardText">Ingredients</p><a href="#" class = "addIngredient"><span uk-icon="plus-circle"></span></a>
           </div>
+
         <ul class = "cardText ingredientsList editList">
         {{#each ingredients as |ingredient|}}
          <div class="deleteIngredientButton">
@@ -45,8 +28,10 @@
         </div>
         {{/each}}
         </ul>
+
         <label for="instructions" class = "cardText">Directions URL:</label>
         <input name = "instructions" type="text" placeholder="URL" class = "cardText urlInput" value = {{instructions}}>
+        
         <input type="submit" value = "SAVE" class = "saveButton">
     </div>
   </div>

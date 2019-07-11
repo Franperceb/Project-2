@@ -186,6 +186,23 @@ a {
 .deleteLi {
   width: 5%; }
 
+.spaceLabel {
+  margin-left: 10px; }
+
+.commentButton {
+  font-family: 'Marcellus SC', serif;
+  border-radius: 10px;
+  padding: 8px 20px;
+  border: none; }
+
+.commentButton:hover {
+  box-shadow: rgba(198, 208, 235, 0.5) 0px 10px 20px;
+  transition: all 120ms ease 0s;
+  cursor: pointer; }
+
+.commentsSection {
+  padding: 50px; }
+
 @media (max-width: 768px) {
   .uk-flex {
     flex-direction: column;
@@ -292,10 +309,6 @@ a {
   border: none;
   cursor: pointer;
   transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) 0s; }
-
-#submit:hover {
-  box-shadow: rgba(198, 208, 235, 0.5) 0px 10px 20px;
-  transition: all 120ms ease 0s; }
 
 #google-login {
   background: #dd4b39;

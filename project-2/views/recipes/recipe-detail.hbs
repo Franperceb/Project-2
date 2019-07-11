@@ -16,7 +16,8 @@
                 </div>
               {{/if}}
             </div>
-              <p class = "cardTitle">Servings: {{recipe.servings}}</p>
+              <label class = "cardTitle">Servings: {{recipe.servings}}</label>
+              <label class = "cardTitle spaceLabel">Calories: {{recipe.calories}}</label>
             <p class = "cardTitle">Ingredients</p>
             <ul class = "cardText ingredientsList">
             {{#each recipe.ingredients as |ingredient|}}
@@ -24,20 +25,32 @@
             {{/each}}
             </ul>
 
-          <h2>Comments</h2>
-          {{#each recipe.comments}}
-          <div> 
-          <p> {{this.comment}} </p>
-          </div>
-          {{/each}}
-
-          <h2> Add comment</h2>
-          <form action="/recipes/{{recipe._id}}" method="POST">
-              <label for="comment">Content</label>
-              <textarea name="comment" rows="5" cols="40" placeholder="Write here!"></textarea>
-            <input type="submit" value="Submit">
-          </form>
-          <a href="/">Go back</a>    
+                       <div class="label-container">
+              {{#each recipe.healthLabels as |hlabel|}}
+                <span class="uk-label uk-label-success">{{hlabel}}</span>
+              {{/each}}
+              {{#each recipe.dietLabels as |dlabel|}}
+                <span class="uk-label uk-label-default">{{dlabel}}</span>
+              {{/each}}
+              {{#each recipe.cautions as |caution|}}
+                <span class="uk-label uk-label-warning">{{caution}}</span>
+              {{/each}}
+            </div>    
         </div>
     </div>
+</div>
+
+<div class="commentsSection">
+  <p class = "cardTitle">Comments</p>
+{{#each recipe.comments}}
+<div> 
+<p> {{this.comment}} </p>
+</div>
+{{/each}}
+<p class = "cardTitle"> Add comment</p>
+<form action="/recipes/{{recipe._id}}" method="POST">
+    <textarea name="comment" rows="5" cols="40" placeholder="Write here!"></textarea>
+  <input type="submit" value="Submit" class = "commentButton">
+</form>
+<a href="/">Go back</a>
 </div>
