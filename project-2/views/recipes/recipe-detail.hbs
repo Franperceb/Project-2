@@ -1,0 +1,44 @@
+<div class="padding"></div>
+<div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+    <div class="uk-card-media-left uk-cover-container">
+      <div class="recipe-image">
+        <img src="{{image}}" alt="recipe image" uk-cover>
+      </div>
+    </div>
+    <div>
+        <div class="uk-card-body">
+            <h3 class="uk-card-title">{{title}}</h3>
+              <p>Calories: {{calories}}</p>
+              <p>Servings: {{servings}}</p>
+            <p>Ingredients</p>
+            <ul>
+            {{#each ingredients as |ingredient|}}
+              <li>{{ingredient}}</li>
+            {{/each}}
+            </ul>
+
+
+ 
+  <h2>Comments</h2>
+
+    {{#each comments}}
+    <div> 
+    <p>{{this.user}}</p>  
+    <p> {{this.comment}} </p>
+     </div>
+    {{/each}}
+
+<h2> Add comment</h2>
+<form action="/recipes/{{_id}}" method="POST">
+    <label for="comment">Content</label>
+    <textarea name="comment" rows="5" cols="40" placeholder="Write here!"></textarea>
+  <input type="submit" value="Submit">
+</form>
+
+<a href="/">Go back</a>
+       
+       
+       
+        </div>
+    </div>
+</div>

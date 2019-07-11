@@ -1,3 +1,5 @@
+// font-family: 'Rubik Mono One', sans-serif;
+
 * {
   margin:0;
   padding: 0; 
@@ -16,7 +18,7 @@ a {
   flex-direction: row-reverse;
   flex-wrap: wrap;
   margin: auto;
-  padding-top: 84px;
+  padding-top: 105px;
   justify-content: space-around;
 }
 
@@ -24,6 +26,7 @@ a {
   width: 100vw;
   position: fixed;
   z-index: 1;
+  box-shadow: 3px 3px 3px rgba(121, 120, 120, 0.103);
 }
 
 .uk-navbar-nav{
@@ -35,8 +38,14 @@ a {
   justify-content: space-around;
 }
 
-.title{
+.title a{
   font-family: 'Marcellus SC', serif;
+  color: black;
+  text-decoration: none;
+}
+
+.title2{
+  font-size: 50px;
 }
 
 .recipe {
@@ -52,7 +61,7 @@ a {
 .recipe img {
   border-radius: 15px;
   width: 90%;
-  margin: 5px;
+  margin:  2px 5px;
   padding: 5px;
 }
 
@@ -96,6 +105,20 @@ a {
   color: whitesmoke;
 }
 
+.padding {
+  padding-top: 105px; 
+}
+
+.recipe-image {
+  width: 300px;
+  height: 300px;
+}
+
+.uk-card-body > h3 {
+  font-family: 'Marcellus SC', serif;
+}
+
+
 @media(max-width: 768px){
   .uk-flex {
     flex-direction: column;
@@ -134,52 +157,118 @@ a {
   height: 100vh;
 }
 
-.signup form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 50%;
-  height: 20%;
-}
+ .signup form > div{
+   position: relative;
+ }
+
 .eye{
   background: none;
   border: none;
   outline: none;
+  position: absolute;
+    right: 4%;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-
-.schedule{
-    display: flex;
-    justify-content:  space-around;
-    height: 600px;
-}
-
-.schedule-cont{
-  width: 250px;
-  height: 450px;
-}
-
-.schedule-cont p {
-  font-size: 25px;
-  text-align: center;
-}
-.schedule-cont > div{
-  border: 1px solid black;
-  width:230px;
-  height: 140px;
-}
-.food-day{
-  display: inherit;
+.signup-cont{
+  display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  height:420px;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 300px;
+  height: 450px;
+  background: white;
+  border-radius: 10px;
+ 
 }
 
-.food-day p{
-  font-size: 20px;
+.signup form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 250px;
+  width: 250px;
 }
-.title-sched{
- text-align: center;
- padding-top: 80px;
+.signup form input, .signup form p, #google-login{
+  width:  calc(100% - 10px);
+  height: 35px;
+  border-radius: 5px;
+  border: 0.5px solid black;
+  padding-left: 10px;
+}
+
+
+.signup form input{
+  background: #fafafa;
+  border: none;
+  outline-color: grey;
+}
+
+#length{
+  height: calc(100%- 15px);
+  border: none;
+  text-align: center;
+  height: 15px;
+}
+
+.label-cont{
+  display: flex;
+  flex-direction: column;
+justify-content: space-between;
+  width: 100%;
+  height: 60px;
+  
+}
+
+.signup form label{
+  font-size: 15px;
+  color: black;
+  font-weight: 500;
+}
+
+#submit{
+  background: #f8f8f8;
+  font-size: 20px;
+  height: 50px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) 0s;
+}
+
+#submit:hover{  
+  box-shadow: rgba(198, 208, 235, 0.5) 0px 10px 20px;
+  transition: all 120ms ease 0s;
+}
+
+#google-login{
+  background: #dd4b39;
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  padding-top: 10px;
+  height: calc(90%- 100px);
+  border: none;
+  width: 250px;
+  letter-spacing: 2px;
+  margin-top: 15px;
+  text-decoration: none;
+}
+/*
+#google-login:hover{  
+  transition-property: 
+*/
+small{
+  font-size: 15px;
+  margin-top: 10px;
+}
+.uk-divider-icon{
+    width: 250px;
+}
+
+.signup form :nth-child(3){
+  width: 100%;
 }

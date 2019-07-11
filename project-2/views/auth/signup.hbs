@@ -1,5 +1,8 @@
 <div class="signup">
-  <h2>Signup</h2>
+<div class= "signup-cont">
+  <h2><i class="fas fa-user-plus"></i>Signup</h2>
+<a href="/auth/google" id="google-login">Sign up with Google</a>
+  <hr class="uk-divider-icon" />
   <form action="/signup" method="POST">
     <input 
     type="username"
@@ -9,66 +12,25 @@
     type="email"
     name="email"
     placeholder="Email" />
-    
-    <input
+
+    <div  >
+         <input
      type="password" 
      name="password" 
      placeholder="Password" 
-     id="pass" />
-  
-
-    <button
+     id="pass" >
+      <button
      type="button"  
     class="eye" 
     onclick="showpass()"><i class="far fa-eye"></i></button>
-    
+    </div> 
+    <p class="strength " id ="length"></p>
     <input 
+    id="submit"
     type="submit"
     value="Register">
- 
 </form>
-    <p class="strength " id ="length"></p>
+  <p>Do you already have an account?<a href="/signup">Log in</a></p>
+</div>
+</div>
 
-<a href="/auth/google">Sign In with Google</a>
-
-
-
-<script>
-    pass.addEventListener('keyup',function(){
-      strengthBar()
-    })
-function strengthBar(){
-  let value = document.getElementById('pass').value
-  let status = document.getElementById('length')
-  let counter= 0
-
-  if(value!=""){
-    if(value.length <= 2)
-    counter=1
-    if(value.length > 4 &&  value.length <= 8)
-    counter=2
-    if(value.length > 8 &&  value.length <= 12)
-    counter=3
-
-    if(counter ==1){
-      status.innerHTML ="Weak";
-      status.style.background="#fa6775"
-      status.style.color ="#ffffff"
-    }
-
-    if(counter ==2){
-      status.innerHTML ="Good";
-      status.style.background="yellow"
-      status.style.color ="#ffffff"
-    }
-
-    if(counter ==3){
-      status.innerHTML ="Excellent";
-      status.style.background="#89da59"
-      status.style.color ="#ffffff"
-    }
-    
-  }
-}
-
-</script>

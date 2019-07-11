@@ -1,6 +1,5 @@
 const { model, Schema } = require('mongoose')
 const passportLocalMongoose = require('passport-local-mongoose')
-
 const userSchema = new Schema(
   {
     username: {
@@ -10,7 +9,14 @@ const userSchema = new Schema(
     email: {
       type: String,
       required: true
-    }
+    },
+    googleId: String,
+    // role: {
+    //   type: String,
+    //   enum: ['ADMIN', 'USER'],
+    //   default: ['USER']
+    // },
+    favorites: [Number]
   },
   {
     timestamps: true,

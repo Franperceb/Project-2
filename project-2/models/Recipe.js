@@ -1,5 +1,20 @@
 const {Schema , model} = require('mongoose')
 
+
+const commentSchema = new Schema({
+  comment: {
+    type: String
+  },
+  user: {
+    type: String,
+    ref: 'User'
+  },
+   commentId: Schema.ObjectId
+}, {
+  timestamps: true, 
+  versionKey: false
+})
+
 const recipeSchema = new Schema ({
   title: {
     type: String,
@@ -36,7 +51,8 @@ const recipeSchema = new Schema ({
   cautions: {
     type: [String],
     required: true
-  }
+  },
+  comments: [commentSchema]
 },{
   timestamps: true,
   versionKey: false

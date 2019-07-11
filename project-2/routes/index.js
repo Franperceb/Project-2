@@ -13,8 +13,6 @@ router.get('/', (req, res, next) => {
   .catch(err => console.log(err))
 })
 
-router.get('/', (req, res, next) => res.render('index'))
-
 router.get('/signup', getSignup)
 router.post('/signup', catchErrors(postSignup))
 
@@ -29,8 +27,23 @@ router.get('/schedule', (req,res,next)=>{
   res.render('schedule')
 })
 
+
+
+
+
+
+// router.get('/calories', (req, res, next) => {
+//    Recipe.find()
+//    .then(recipes => {
+//      recipes.forEach(e => {
+//        e.update({calories: calories.toFixed(2), {new: true})
+//      })
+//    })
+//    .catch(err => console.log(err))
+//   })
+
 //google
-/*
+
 router.get('/auth/google',
     passport.authenticate('google', { scope: ['https://www.googleapis.com/auth/plus.login'] }));
 
@@ -38,7 +51,8 @@ router.get('/auth/google/callback',
   passport.authenticate('google', { failureRedirect: '/login' }),
   function(req, res) {
     res.redirect('/profile');
-  });*/
+  });
+  
 module.exports = router
 
 
