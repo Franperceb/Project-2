@@ -2,11 +2,22 @@
   {{#if err}}
   <h2>{{err}}</h2>
   {{else}}
-  <h2>Login</h2>
+  <div class= "signup-cont">
+      <h2>Login</h2>
+    <a href="/auth/google" id="google-login">Log In with Google</a>
+    <small>Or</small>
   {{/if}}
-  <form action="/login" method="POST">
-    <input type="username" name="username" placeholder="username"/>
-    <input type="password" name="password" placeholder="Password"/>
-    <input type="submit" value="Login">
-  </form>
+   <form action="/login"  method="POST">
+      <div class="label-cont">
+          <label for="username">Username</label>
+          <input type="username" name="username" placeholder="Enter username"/>
+      </div >
+       <div class="label-cont ">  
+         <label for="username">Password</label>
+         <input type="password" name="password" placeholder="Enter password"/>
+      </div>
+          <input id="submit" type="submit" value="Log in"/>
+      </form>
+    <p>You do not have an account?<a href="/signup">Register</a></p>
+  </div> 
 </div>

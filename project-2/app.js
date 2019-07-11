@@ -10,7 +10,7 @@ const logger       = require('morgan');
 const path         = require('path');
 const passport = require('./config/passport.js')
 const session = require('express-session')
-
+const { checkLoggedUser } = require('./middlewares/auth')
 
 mongoose
   .connect(process.env.DB, {useNewUrlParser: true})
@@ -65,9 +65,8 @@ hbs.registerPartials(`${__dirname}/views/partials`)
 app.locals.title = 'Recipes4You';
 
 const index = require('./routes/index');
-app.use('/', index);
-app.use('/recipes', require('./routes/recipesRoutes'))
+app.use('/', checkLoggedUser, index);
+app.use('/recipes', require('./routes/recipesRoutes'));
 app.use('/admin', require('./routes/adminRoutes'))
-
 
 module.exports = app;

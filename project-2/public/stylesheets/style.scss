@@ -289,17 +289,118 @@ a {
   height: 100vh;
 }
 
-.signup form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 50%;
-  height: 20%;
-}
+ .signup form > div{
+   position: relative;
+ }
+
 .eye{
   background: none;
   border: none;
   outline: none;
+  position: absolute;
+    right: 4%;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
+.signup-cont{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 300px;
+  height: 450px;
+  background: white;
+  border-radius: 10px;
+ 
+}
+
+.signup form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 250px;
+  width: 250px;
+}
+.signup form input, .signup form p, #google-login{
+  width:  calc(100% - 10px);
+  height: 35px;
+  border-radius: 5px;
+  border: 0.5px solid black;
+  padding-left: 10px;
+}
+
+
+.signup form input{
+  background: #fafafa;
+  border: none;
+  outline-color: grey;
+}
+
+#length{
+  height: calc(100%- 15px);
+  border: none;
+  text-align: center;
+  height: 15px;
+}
+
+.label-cont{
+  display: flex;
+  flex-direction: column;
+justify-content: space-between;
+  width: 100%;
+  height: 60px;
+  
+}
+
+.signup form label{
+  font-size: 15px;
+  color: black;
+  font-weight: 500;
+}
+
+#submit{
+  background: #f8f8f8;
+  font-size: 20px;
+  height: 50px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) 0s;
+}
+
+#submit:hover{  
+  box-shadow: rgba(198, 208, 235, 0.5) 0px 10px 20px;
+  transition: all 120ms ease 0s;
+}
+
+#google-login{
+  background: #dd4b39;
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  padding-top: 10px;
+  height: calc(90%- 100px);
+  border: none;
+  width: 250px;
+  letter-spacing: 2px;
+  margin-top: 15px;
+  text-decoration: none;
+}
+/*
+#google-login:hover{  
+  transition-property: 
+*/
+small{
+  font-size: 15px;
+  margin-top: 10px;
+}
+.uk-divider-icon{
+    width: 250px;
+}
+
+.signup form :nth-child(3){
+  width: 100%;
+}

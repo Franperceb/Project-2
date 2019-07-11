@@ -23,19 +23,29 @@
               <li>{{ingredient}}</li>
             {{/each}}
             </ul>
-            <p class = "cardText">For directions, please click <a href="{{recipe.instructions}}" target = "_blank">here.</a></p>
 
-            <div class="label-container">
-              {{#each recipe.healthLabels as |hlabel|}}
-                <span class="uk-label uk-label-success">{{hlabel}}</span>
-              {{/each}}
-              {{#each recipe.dietLabels as |dlabel|}}
-                <span class="uk-label uk-label-default">{{dlabel}}</span>
-              {{/each}}
-              {{#each recipe.cautions as |caution|}}
-                <span class="uk-label uk-label-warning">{{caution}}</span>
-              {{/each}}
-            </div>
+
+ 
+  <h2>Comments</h2>
+
+    {{#each comments}}
+    <div> 
+    <p>{{this.user}}</p>  
+    <p> {{this.comment}} </p>
+     </div>
+    {{/each}}
+
+<h2> Add comment</h2>
+<form action="/recipes/{{_id}}" method="POST">
+    <label for="comment">Content</label>
+    <textarea name="comment" rows="5" cols="40" placeholder="Write here!"></textarea>
+  <input type="submit" value="Submit">
+</form>
+
+<a href="/">Go back</a>
+       
+       
+       
         </div>
     </div>
 </div>
