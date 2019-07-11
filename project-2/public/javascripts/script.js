@@ -33,18 +33,18 @@ add.onclick = e => {
   let input = document.createElement("input")
   input.type = "text"
   input.name = "ingredients"
+  input.required = true
   input.className = "cardText ingredientInput"
   li.appendChild(input)
   ingredientList.appendChild(li)
 }
 
 //delete ingredients in edit page
-// const listElement = document.querySelector('.listElement')
+const remove = document.querySelector('.deleteLi')
 
-// listElement.ondbclick = e => {
-//   const li = listElement 
-//   ingredientList.removeChild(li)
-// }
+remove.onclick = e => {
+  
+}
 
 // function getFilteredData(){
 //   let url = 

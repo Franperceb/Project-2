@@ -124,7 +124,7 @@ a {
 }
 
 .titleAndButtons > h3 > input {
-  width: 40vw;
+  width: 43vw;
   height: 30px;
   font-size: 20px;
 }
@@ -176,18 +176,13 @@ a {
   justify-content: flex-start;
 }
 
-.ingredientsList {
-  //width: 70%;
-  margin-top: 0;
-}
-
 .servingsInput {
   width: 10%;
   text-align: center;
 }
 
 .ingredientInput {
-  width: 70%;
+  width: 97%;
 }
 
 .urlInput {
@@ -219,11 +214,24 @@ a {
 
 }
 
+.ingredientsList {
+  width: 100%;
+  margin-top: 0;
+}
+
+.listElement {
+  width: 95%;
+}
+
 .deleteIngredientButton {
   display: flex;
   flex-direction: row;
   margin-top: 10px;
-  width: 90vw;
+  width: 100%;
+}
+
+.deleteLi {
+  width: 5%;
 }
 
 @media(max-width: 768px){
@@ -251,12 +259,16 @@ a {
   }
 
   .ingredientInput {
-    width: 55vw;
+    width: 45vw;
   }
 
   .uk-card-media-left {
     width: 100vw;
     margin-top: 10px;
+  }
+
+  .deleteIngredientButton{
+    width: 50vw;
   }
 }
 

@@ -99,7 +99,7 @@ a {
   font-family: 'Marcellus SC', serif; }
 
 .titleAndButtons > h3 > input {
-  width: 40vw;
+  width: 43vw;
   height: 30px;
   font-size: 20px; }
 
@@ -140,15 +140,12 @@ a {
   flex-direction: row;
   justify-content: flex-start; }
 
-.ingredientsList {
-  margin-top: 0; }
-
 .servingsInput {
   width: 10%;
   text-align: center; }
 
 .ingredientInput {
-  width: 70%; }
+  width: 97%; }
 
 .urlInput {
   width: 75%; }
@@ -173,11 +170,21 @@ a {
   margin-left: 10px;
   color: #666; }
 
+.ingredientsList {
+  width: 100%;
+  margin-top: 0; }
+
+.listElement {
+  width: 95%; }
+
 .deleteIngredientButton {
   display: flex;
   flex-direction: row;
   margin-top: 10px;
-  width: 90vw; }
+  width: 100%; }
+
+.deleteLi {
+  width: 5%; }
 
 @media (max-width: 768px) {
   .uk-flex {
@@ -194,10 +201,12 @@ a {
   .titleAndButtons > h3 > input {
     width: 80vw; }
   .ingredientInput {
-    width: 55vw; }
+    width: 45vw; }
   .uk-card-media-left {
     width: 100vw;
-    margin-top: 10px; } }
+    margin-top: 10px; }
+  .deleteIngredientButton {
+    width: 50vw; } }
 
 .home {
   display: flex;

@@ -20,7 +20,7 @@
 </form> --}}
 
 
-<form action="/admin/{{_id}}/updateRecipe" method="POST" class = "padding"></form>
+<form action="/admin/{{_id}}/updateRecipe" method="POST" class = "padding">
   <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
     <div class="uk-card-media-left uk-cover-container">
       <div class="recipe-image">
@@ -39,13 +39,12 @@
           </div>
         <ul class = "cardText ingredientsList editList">
         {{#each ingredients as |ingredient|}}
-        {{!-- <div class="deleteIngredientButton"> --}}
+         <div class="deleteIngredientButton">
           <li class = "listElement"><input name = "ingredients" type="text" placeholder="Ingredient" value = "{{ingredient}}" class = "cardText ingredientInput"></li>
-          {{!-- <span uk-icon="minus-circle" class = "deleteLi"></span> --}}
-        {{!-- </div> --}}
+          <a href="#" class = "deleteLi"><span uk-icon="minus-circle"></span></a>
+        </div>
         {{/each}}
         </ul>
-        <p class="cardText">*To delete an ingredient, just leave the input empty.</p>
         <label for="instructions" class = "cardText">Directions URL:</label>
         <input name = "instructions" type="text" placeholder="URL" class = "cardText urlInput" value = {{instructions}}>
         <input type="submit" value = "SAVE" class = "saveButton">
