@@ -2,7 +2,7 @@
 <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
     <div class="uk-card-media-left uk-cover-container">
       <div class="recipe-image">
-        <img src="{{recipe.image}}" alt="recipe image" class = "recipe-image1" uk-cover>
+        <img src="{{recipe.image}}" alt="recipe image" class = "recipe-image1" uk-cover/>
       </div>
     </div>
     <div>
@@ -25,7 +25,7 @@
             {{/each}}
             </ul>
 
-                       <div class="label-container">
+              <div class="label-container">
               {{#each recipe.healthLabels as |hlabel|}}
                 <span class="uk-label uk-label-success">{{hlabel}}</span>
               {{/each}}
@@ -35,22 +35,24 @@
               {{#each recipe.cautions as |caution|}}
                 <span class="uk-label uk-label-warning">{{caution}}</span>
               {{/each}}
-            </div>    
+              </div> 
+              <br>
+              <label class = "cardText">For directions, please click <a href="{{recipe.instructions}}" target ="_blank">here.</a></label><br> 
+              <label class = "cardText">Need any ingredients? Checkout <a href="https://www.rappi.com.mx/" target = "_blank">this</a> link!</label><i class="fas fa-shopping-cart"></i>
         </div>
     </div>
 </div>
 
 <div class="commentsSection">
-  <p class = "cardTitle">Comments</p>
-{{#each recipe.comments}}
-<div> 
-<p> {{this.comment}} </p>
-</div>
-{{/each}}
-<p class = "cardTitle"> Add comment</p>
-<form action="/recipes/{{recipe._id}}" method="POST">
-    <textarea name="comment" rows="5" cols="40" placeholder="Write here!"></textarea>
-  <input type="submit" value="Submit" class = "commentButton">
-</form>
-<a href="/">Go back</a>
+  <p class = "commentTitle">Comments</p>
+    {{#each recipe.comments}}
+    <div class = "comment"> 
+      <p class = "commentDisplay"> {{this.comment}} </p>
+    </div>
+    {{/each}}
+  <p class = "commentTitle"> Add comment</p>
+  <form action="/recipes/{{recipe._id}}" method="POST">
+      <textarea name="comment" rows="5" cols="40" placeholder="Write here!" class = "commentText"></textarea>
+   <br/><input type="submit" value="Submit" class = "commentButton">
+  </form>
 </div>

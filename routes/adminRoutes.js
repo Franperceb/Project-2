@@ -1,9 +1,10 @@
 const router = require('express').Router()
 const { isLoggedIn} = require('../middlewares/auth')
-const { createRecipe, getUpdateRecipe, postUpdateRecipe, deleteRecipe } = require('../controllers/adminControllers')
+const { getCreateRecipe, postCreateRecipe, getUpdateRecipe, postUpdateRecipe, deleteRecipe } = require('../controllers/adminControllers')
 
 //-------Crud---------//
-router.get("/createRecipe", isLoggedIn, createRecipe)
+router.get("/createRecipe", getCreateRecipe)
+router.post("/createRecipe", postCreateRecipe)
 
 //---------crUd----------//
 router.get("/:id/updateRecipe", getUpdateRecipe)

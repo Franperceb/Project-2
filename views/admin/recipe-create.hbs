@@ -1,0 +1,36 @@
+<form action="/admin/createRecipe" method="POST" class = "padding">
+  <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+    <div class="uk-card-media-left uk-cover-container">
+      <div class="recipe-image">
+        <img src="http://www.jotc-zambezi.org/wp-content/themes/zamdo/assets/images/blog/no-img.jpg" alt="recipe image" class = "recipe-image1" uk-cover>
+      </div>
+  </div>
+  <div>
+    <div class="uk-card-body">
+        <div class="titleAndButtons">
+          <h3 class="uk-card-title"><input class = "titleForm" type="text" name = "title" placeholder="Title" id = "name"></h3>
+        </div>
+          <label for="servings" class = "cardText">Servings:</label>
+          <input name = "servings" type="number" class = "cardText servingsInput" placeholder="#">
+          
+          <label for="calories" class = "cardText">Calories</label>
+          <input name = "calories" type="text" placeholder="Calories" class = "cardText">
+          
+          <div class="addIngredientButton">
+          <p class = "cardText">Ingredients</p><a href="#" class = "addIngredient"><span uk-icon="plus-circle"></span></a>
+          </div>
+
+        <ul class = "cardText ingredientsList editList">
+          <li class = "listElement"><input name = "ingredients" type="text" placeholder="Ingredient" class = "cardText ingredientInput"></li>
+        </ul>
+
+        <label class = "cardText">Image URL:</label>
+        <input name = "image" type="text" placeholder="URL" class = "cardText urlInput">
+        <br>
+        <label for="instructions" class = "cardText">Directions URL:</label>
+        <input name = "instructions" type="text" placeholder="URL" class = "cardText urlInput">
+        
+        <input type="submit" value = "SAVE" class = "saveButton">
+    </div>
+  </div>
+</form>

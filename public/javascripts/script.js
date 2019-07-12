@@ -25,27 +25,37 @@ function showpass(){
 }
 
 //Add ingredient in edit page
-// const addRecipe= document.querySelector('.addIngredient')
-// const ingredientList = document.querySelector('.ingredientsList')
+const add = document.querySelector('.addIngredient')
+const ingredientList = document.querySelector('.ingredientsList')
 
-//   addRecipe.onclick = e => {
-//   const li = document.createElement("li")
-//   let input = document.createElement("input")
-//   input.type = "text"
-//   input.name = "ingredients"
-//   input.required = true
-//   input.className = "cardText ingredientInput"
-//   li.appendChild(input)
-//   ingredientList.appendChild(li)
-// }
-
-//delete ingredients in edit page
-const remove = document.querySelector('.deleteLi')
-
-remove.onclick = e => {
-  
+add.onclick = e => {
+  const li = document.createElement("li")
+  let input = document.createElement("input")
+  input.type = "text"
+  input.name = "ingredients"
+  input.required = true
+  input.className = "cardText ingredientInput"
+  input.placeholder = "Ingredient"
+  li.appendChild(input)
+  ingredientList.appendChild(li)
 }
 
+// Password strength
+pass.addEventListener('keyup',function(){
+  strengthBar()
+})
+function strengthBar(){
+let value = document.getElementById('pass').value
+let status = document.getElementById('length')
+let counter= 0
+
+if(value!=""){
+if(value.length <= 2)
+counter=1
+if(value.length > 4 &&  value.length <= 8)
+counter=2
+if(value.length > 8 &&  value.length <= 12)
+counter=3
 
 
 // Password strength

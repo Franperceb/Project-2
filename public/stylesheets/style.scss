@@ -64,6 +64,23 @@ a {
   font-size: 50px;
 }
 
+.recipe {
+  width: 15%;
+  height: 9%;
+  text-align: center;
+  background: whitesmoke;
+  margin-top: 8px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 1px rgba(121, 120, 120, 0.103);
+}
+
+.recipe:hover {
+  height: 12%;
+  box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.5);
+  text-decoration: none;
+  color: rgb(75, 74, 74);
+  cursor: pointer;
+}
 
 .recipe img {
   border-radius: 15px;
@@ -82,11 +99,6 @@ a {
 .recipe:hover > .like {
   cursor: pointer;
   display: block;
-}
-
-.recipe:hover {
-  text-decoration: underline;
-  cursor: pointer
 }
 
 .like {
@@ -156,7 +168,7 @@ a {
 
 .cardTitle {
   font-family: 'Literata', serif;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .uk-label-success {
@@ -202,10 +214,12 @@ a {
   border-radius: 10px;
   padding: 8px 20px;
   border: none;
+  outline: none;
 }
 
 .saveButton:hover {
   cursor: pointer;
+  box-shadow: rgba(198, 208, 235, 0.5) 0px 10px 20px;
 }
 
 .addIngredientButton {
@@ -217,7 +231,6 @@ a {
 .addIngredientButton > a {
   margin-left: 10px;
   color: #666;
-
 }
 
 .ingredientsList {
@@ -238,6 +251,11 @@ a {
 
 .deleteLi {
   width: 5%;
+  color: #666;
+}
+
+.deleteLi:hover {
+  color: #666;
 }
 
 .spaceLabel {
@@ -258,45 +276,69 @@ a {
 }
 
 .commentsSection {
-  padding: 50px;
+  padding: 30px;
+  margin: auto 0;
 }
 
-@media(max-width: 768px){
-  .uk-flex {
-    flex-direction: column;
-    width: 100vw;
-    padding-top: 250px;
-  }
+.comment {
+  background: lightgrey;
+  border-radius: 2px;
+  width: 60vw;
+  height: 5vh;
+  margin: 5px;
+}
 
-  .recipe img {
-    height: 250px;
-  }
+.uk-card-body > input, .uk-card-body .titleForm, .ingredientInput {
+  border-radius: 2px;
+  margin-top: 5px;
+  border: none;
+  outline-color: #666;
+  background: rgb(228, 227, 227);
+  padding-left: 10px;
+}
 
-  .recipe {
-    width: 90vw;
-    font-size: 18px
-  }
+.fa-shopping-cart{
+  padding-left: 5px;
+}
 
-  .like {
-    font-size: 18px;
-  }
+.theCover {
+  width: 100vw;
+  height: 100vh;
+}
 
-  .titleAndButtons > h3 > input {
-    width: 80vw;
-  }
+.center, .center h1 {
+  margin: auto;
+  text-align: center;
+  font-family: 'Literata', serif;
+}
 
-  .ingredientInput {
-    width: 45vw;
-  }
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 20%;
+}
 
-  .uk-card-media-left {
-    width: 100vw;
-    margin-top: 10px;
-  }
+.center span {
+  font-family: 'Marcellus SC', serif;
+}
 
-  .deleteIngredientButton{
-    width: 50vw;
-  }
+.center a {
+  font-size: 20px;
+  text-decoration: none;
+  width:  calc(100% - 10px);
+  height: 35px;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  background: olivedrab;
+  margin-top: 10px;
+}
+
+.center a:hover {
+  background: olive;
+  padding: 10 10 10 10;
+  transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) 0s;
 }
 
 .home {
@@ -487,6 +529,108 @@ small{
     object-fit: contain;
     margin-top: 100px;
     width: 50vw;
+  }
+  .titleAndPot h2 {
+    margin: 0;
+    font-size: 1rem;
+  
+  }
+}
 
+  .commentTitle {
+  font-size: 18px;
+  font-family: 'Marcellus SC', serif;
+}
+
+.commentText {
+  font-family: 'Literata', serif;
+  font-size: 12px;
+  border: none;
+  border-radius: 5px;
+  margin: 5px 0px;
+  padding: 8px;
+  width: 60vw;
+}
+
+.commentDisplay {
+  font-family: 'Literata', serif;
+  font-size: 12px;
+  border: none;
+  border-radius: 5px;
+  margin: 5px 0px;
+  padding: 4px;
+}
+
+.titleAndPot {
+  padding-right: 35px;
+}
+.titleAndPot {
+  padding-right: 0px;
+}
+.titleAndPot h2 {
+  margin: 0;
+}
+
+@media screen and(max-width: 375px){
+  .uk-flex {
+    flex-direction: column;
+    width: 100vw;
+    padding-top: 250px;
+  }
+  .signup-cont{
+
+    width: 300px;
+    height: 450px;
+    margin-top: 200px;
+  }
+  .signup-cont h2{
+    font-size: 30px; 
+       }
+  .recipe img {
+    height: 250px;
+  }
+
+  .recipe {
+    width: 90vw;
+    font-size: 18px
+  }
+
+  .like {
+    font-size: 18px;
+  }
+
+  .titleAndButtons > h3 > input {
+    width: 80vw;
+  }
+
+  .ingredientInput {
+    width: 45vw;
+  }
+
+  .uk-card-media-left {
+    width: 100vw;
+    margin-top: 10px;
+  }
+
+  .deleteIngredientButton{
+    width: 50vw;
+  }
+
+  .uk-navbar-nav>li.uk-active>a{
+    padding-top: 50px;
+    padding-right: 60px;
+  }
+
+  .uk-navbar-item {
+    width: 200px;
+    margin-right: 0px;
+  }
+  .recipe{
+    
+    margin-top: 10px;
+   
+  }
+  .uk-navbar-nav{
+    padding-left: 40px;
   }
 }

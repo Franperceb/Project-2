@@ -42,16 +42,13 @@ const recipeSchema = new Schema ({
     required: true
   },
   healthLabels: {
-    type: [String],
-    required: true
+    type: [String]
   },
   dietLabels: {
-    type: [String],
-    required: true
+    type: [String]
   },
   cautions: {
-    type: [String],
-    required: true
+    type: [String]
   },
   likes: {
     type: [String]

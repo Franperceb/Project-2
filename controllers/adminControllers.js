@@ -1,14 +1,19 @@
 const Recipe = require('../models/Recipe')
 
 //checar createRecipe
-exports.createRecipe = (req, res) => {
+exports.getCreateRecipe = (req, res) => {
   const { user } = req
-  let canCreateRecipe
-  Recipe.find()
-  .then(recipes => {
-    canCreateRecipe = true
-    res.render("index", { user, recipes, canCreateRecipe })
-  })
+  if(user.role === 'ADMIN'){
+    res.render('admin/recipe-create')
+  } else {
+    res.redirect('/')
+  }
+}
+
+exports.postCreateRecipe = (req, res) => {
+  Recipe.create({...req.body})
+  .then(recipe => res.redirect(`/recipes/${recipe._id}`))
+  .catch(err => next(err))
 }
 
 exports.getUpdateRecipe = (req, res) => {

@@ -86,6 +86,7 @@ hbs.registerPartials(`${__dirname}/views/partials`)
 
 // default value for title local
 app.locals.title = 'Recipes4You';
+app.locals.loggedUser = false;
 
 const index = require('./routes/index');
 app.use('/', checkLoggedUser, index);
