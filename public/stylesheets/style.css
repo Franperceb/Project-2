@@ -42,8 +42,16 @@ a {
   height: 9%;
   text-align: center;
   background: whitesmoke;
+  margin-top: 8px;
   border-radius: 15px;
   box-shadow: 1px 1px 1px rgba(121, 120, 120, 0.103); }
+
+.recipe:hover {
+  height: 12%;
+  box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  color: #4b4a4a;
+  cursor: pointer; }
 
 .recipe img {
   border-radius: 15px;
@@ -60,10 +68,6 @@ a {
 .recipe:hover > .like {
   cursor: pointer;
   display: block; }
-
-.recipe:hover {
-  text-decoration: underline;
-  cursor: pointer; }
 
 .like {
   border-radius: 3px;
@@ -120,7 +124,7 @@ a {
 
 .cardTitle {
   font-family: 'Literata', serif;
-  font-size: 14px; }
+  font-size: 15px; }
 
 .uk-label-success {
   background: olivedrab; }
@@ -156,10 +160,12 @@ a {
   font-family: 'Marcellus SC', serif;
   border-radius: 10px;
   padding: 8px 20px;
-  border: none; }
+  border: none;
+  outline: none; }
 
 .saveButton:hover {
-  cursor: pointer; }
+  cursor: pointer;
+  box-shadow: rgba(198, 208, 235, 0.5) 0px 10px 20px; }
 
 .addIngredientButton {
   display: flex;
@@ -184,7 +190,11 @@ a {
   width: 100%; }
 
 .deleteLi {
-  width: 5%; }
+  width: 5%;
+  color: #666; }
+
+.deleteLi:hover {
+  color: #666; }
 
 .spaceLabel {
   margin-left: 10px; }
@@ -201,29 +211,60 @@ a {
   cursor: pointer; }
 
 .commentsSection {
-  padding: 50px; }
+  padding: 30px;
+  margin: auto 0; }
 
-@media (max-width: 768px) {
-  .uk-flex {
-    flex-direction: column;
-    width: 100vw;
-    padding-top: 250px; }
-  .recipe img {
-    height: 250px; }
-  .recipe {
-    width: 90vw;
-    font-size: 18px; }
-  .like {
-    font-size: 18px; }
-  .titleAndButtons > h3 > input {
-    width: 80vw; }
-  .ingredientInput {
-    width: 45vw; }
-  .uk-card-media-left {
-    width: 100vw;
-    margin-top: 10px; }
-  .deleteIngredientButton {
-    width: 50vw; } }
+.comment {
+  background: lightgrey;
+  border-radius: 2px;
+  width: 60vw;
+  height: 5vh;
+  margin: 5px; }
+
+.uk-card-body > input, .uk-card-body .titleForm, .ingredientInput {
+  border-radius: 2px;
+  margin-top: 5px;
+  border: none;
+  outline-color: #666;
+  background: #e4e3e3;
+  padding-left: 10px; }
+
+.fa-shopping-cart {
+  padding-left: 5px; }
+
+.theCover {
+  width: 100vw;
+  height: 100vh; }
+
+.center, .center h1 {
+  margin: auto;
+  text-align: center;
+  font-family: 'Literata', serif; }
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 20%; }
+
+.center span {
+  font-family: 'Marcellus SC', serif; }
+
+.center a {
+  font-size: 20px;
+  text-decoration: none;
+  width: calc(100% - 10px);
+  height: 35px;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  background: olivedrab;
+  margin-top: 10px; }
+
+.center a:hover {
+  background: olive;
+  padding: 10 10 10 10;
+  transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) 0s; }
 
 .home {
   display: flex;
@@ -323,10 +364,6 @@ a {
   margin-top: 15px;
   text-decoration: none; }
 
-/*
-#google-login:hover{  
-  transition-property: 
-*/
 small {
   font-size: 15px;
   margin-top: 10px; }
@@ -336,5 +373,59 @@ small {
 
 .signup form :nth-child(3) {
   width: 100%; }
+
+.commentTitle {
+  font-size: 18px;
+  font-family: 'Marcellus SC', serif; }
+
+.commentText {
+  font-family: 'Literata', serif;
+  font-size: 12px;
+  border: none;
+  border-radius: 5px;
+  margin: 5px 0px;
+  padding: 8px;
+  width: 60vw; }
+
+.commentDisplay {
+  font-family: 'Literata', serif;
+  font-size: 12px;
+  border: none;
+  border-radius: 5px;
+  margin: 5px 0px;
+  padding: 4px; }
+
+.titleAndPot {
+  padding-right: 35px; }
+
+.titleAndPot h2 {
+  margin: 0; }
+
+@media (max-width: 768px) {
+  .uk-flex {
+    flex-direction: column;
+    width: 100vw;
+    padding-top: 250px; }
+  .recipe img {
+    height: 250px; }
+  .recipe {
+    width: 90vw;
+    font-size: 18px; }
+  .like {
+    font-size: 18px; }
+  .titleAndButtons > h3 > input {
+    width: 80vw; }
+  .ingredientInput {
+    width: 45vw; }
+  .uk-card-media-left {
+    width: 100vw;
+    margin-top: 10px; }
+  .deleteIngredientButton {
+    width: 50vw; }
+  .uk-search {
+    display: none; }
+  .uk-navbar-nav > li.uk-active > a {
+    padding-top: 50px;
+    padding-right: 60px; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -22,14 +22,15 @@
       </form>
     </div>
 
-    <div class = "uk-navbar-item">
-      <h2 class = "title uk-position-top-center"> <a href="/">Recipes<span class = "title2">4</span>You </a></h2>
+    <div class = "uk-navbar-item titleAndPot">
+       <h2 class = "title"> <a href="/">Recipes<span class = "title2">4</span>You<img src="/images/Meltinpot.gif" alt="meltingpot" width = "75"></a></h2>
     </div>
 
     <ul class="uk-navbar-nav">
       {{#if loggedUser}}
         <li class="uk-active"><a href="/profile">Profile</a></li>
         <li class="uk-active"><a href="/logout">Logout</a></li>
+        <li class = "uk-active"><a href="/admin/createRecipe">+</a></li>
         {{else}}
         <li class="uk-active"><a href="/login">Login</a></li>
         <li class="uk-active"><a href="/signup">Signup</a></li>

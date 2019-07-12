@@ -7,7 +7,6 @@ const passport = require('passport')
 const Recipe = require('../models/Recipe')
 
 router.get('/', (req, res, next) => {
-  console.log('wtf')
   Recipe.find()
   .then(recipess => {
     res.render('index',{recipess})

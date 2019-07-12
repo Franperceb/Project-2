@@ -35,25 +35,11 @@ add.onclick = e => {
   input.name = "ingredients"
   input.required = true
   input.className = "cardText ingredientInput"
+  input.placeholder = "Ingredient"
   li.appendChild(input)
   ingredientList.appendChild(li)
 }
 
-//delete ingredients in edit page
-const remove = document.querySelector('.deleteLi')
-
-remove.onclick = e => {
-  
-}
-
-// function getFilteredData(){
-//   let url = 
-//   axios.get(url)
-//   .then(res => {
-
-//   })
-//   .catch(err => console.log(err))
-// }
 // Password strength
 pass.addEventListener('keyup',function(){
   strengthBar()
