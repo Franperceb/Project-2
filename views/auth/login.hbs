@@ -3,21 +3,27 @@
   <h2>{{err}}</h2>
   {{else}}
   <div class= "signup-cont">
-      <h2>Login</h2>
-    <a href="/auth/google" id="google-login">Log In with Google</a>
-    <small>Or</small>
+      <h2><i class="fas fa-sign-in-alt"></i>Log in</h2>
+    <a href="/auth/google" id="google-login">Log In with Google <i class="fab fa-google"></i></a>
+   <hr class="uk-divider-icon" />
   {{/if}}
    <form action="/login"  method="POST">
       <div class="label-cont">
           <label for="username">Username</label>
           <input type="username" name="username" placeholder="Enter username"/>
+   
       </div >
        <div class="label-cont ">  
          <label for="username">Password</label>
          <input type="password" name="password" placeholder="Enter password"/>
+        
       </div>
+ {{#if message }}
+      <div class=" uk-alert-danger" >{{ message }}</div>
+    {{/if}}
           <input id="submit" type="submit" value="Log in"/>
       </form>
-    <p>You do not have an account?<a href="/signup">Register</a></p>
+
+    <p>You do not have an account?<a href="/signup">  Register</a></p>
   </div> 
 </div>

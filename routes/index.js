@@ -7,7 +7,6 @@ const passport = require('passport')
 const Recipe = require('../models/Recipe')
 
 router.get('/', (req, res, next) => {
-  console.log('wtf')
   Recipe.find()
   .then(recipess => {
     res.render('index',{recipess})
@@ -16,7 +15,7 @@ router.get('/', (req, res, next) => {
 })
 
 router.get('/signup', getSignup)
-router.post('/signup', catchErrors(postSignup))
+router.post('/signup',postSignup)
 
 router.get('/login', getLogin)
 router.post('/login', postLogin)

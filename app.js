@@ -10,7 +10,11 @@ const logger       = require('morgan');
 const path         = require('path');
 const passport = require('./config/passport.js')
 const session = require('express-session')
+const bcrypt       = require('bcrypt')
 const { checkLoggedUser } = require('./middlewares/auth')
+const flash = require('connect-flash')
+const LocalStrategy = require("passport-local").Strategy
+const User = require('./models/User')
 
 mongoose
   .connect(process.env.DB, {useNewUrlParser: true})
@@ -37,8 +41,27 @@ app.use(
   })
   )
 
-app.use(passport.initialize())
-app.use(passport.session())
+  
+  app.use(flash())
+  passport.use(new LocalStrategy({
+    passReqToCallback: true
+  },(req,username, password, next) => {    
+    
+    User.findOne({ username}, (err, user) => {
+      if (err) {
+        return next(err);
+      }
+      if (!user) {
+        return next(null, false, { message: "Incorrect username" });
+      }
+      
+      return next(null, user);
+    });
+  }));
+  
+  app.use(passport.initialize())
+  app.use(passport.session())
+  
 // Middleware Setup
 app.use(logger('dev'));
 app.use(bodyParser.json());

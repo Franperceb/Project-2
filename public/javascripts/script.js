@@ -25,19 +25,19 @@ function showpass(){
 }
 
 //Add ingredient in edit page
-const add = document.querySelector('.addIngredient')
-const ingredientList = document.querySelector('.ingredientsList')
+// const addRecipe= document.querySelector('.addIngredient')
+// const ingredientList = document.querySelector('.ingredientsList')
 
-add.onclick = e => {
-  const li = document.createElement("li")
-  let input = document.createElement("input")
-  input.type = "text"
-  input.name = "ingredients"
-  input.required = true
-  input.className = "cardText ingredientInput"
-  li.appendChild(input)
-  ingredientList.appendChild(li)
-}
+//   addRecipe.onclick = e => {
+//   const li = document.createElement("li")
+//   let input = document.createElement("input")
+//   input.type = "text"
+//   input.name = "ingredients"
+//   input.required = true
+//   input.className = "cardText ingredientInput"
+//   li.appendChild(input)
+//   ingredientList.appendChild(li)
+// }
 
 //delete ingredients in edit page
 const remove = document.querySelector('.deleteLi')
@@ -46,48 +46,10 @@ remove.onclick = e => {
   
 }
 
-// function getFilteredData(){
-//   let url = 
-//   axios.get(url)
-//   .then(res => {
 
-//   })
-//   .catch(err => console.log(err))
-// }
+
 // Password strength
-pass.addEventListener('keyup',function(){
-  strengthBar()
-})
-function strengthBar(){
-let value = document.getElementById('pass').value
-let status = document.getElementById('length')
-let counter= 0
+function passwordStrength(){
 
-if(value!=""){
-if(value.length <= 2)
-counter=1
-if(value.length > 4 &&  value.length <= 8)
-counter=2
-if(value.length > 8 &&  value.length <= 12)
-counter=3
 
-if(counter ==1){
-  status.innerHTML ="Weak";
-  status.style.background="#fa6775"
-  status.style.color ="#ffffff"
-}
-
-if(counter ==2){
-  status.innerHTML ="Good";
-  status.style.background="#FFE437"
-  status.style.color ="#ffffff"
-}
-
-if(counter ==3){
-  status.innerHTML ="Excellent";
-  status.style.background="#89da59"
-  status.style.color ="#ffffff"
-}
-
-}
 }

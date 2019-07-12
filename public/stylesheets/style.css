@@ -19,6 +19,9 @@ a {
 .uk-navbar-container {
   width: 100vw;
   position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   z-index: 1;
   box-shadow: 3px 3px 3px rgba(121, 120, 120, 0.103); }
 
@@ -27,7 +30,10 @@ a {
 
 .uk-navbar-center {
   display: flex;
-  justify-content: space-around; }
+  justify-content: space-evenly; }
+
+.uk-navbar-item {
+  margin-right: 80px; }
 
 .title a {
   font-family: 'Marcellus SC', serif;
@@ -43,7 +49,8 @@ a {
   text-align: center;
   background: whitesmoke;
   border-radius: 15px;
-  box-shadow: 1px 1px 1px rgba(121, 120, 120, 0.103); }
+  box-shadow: 1px 1px 1px rgba(121, 120, 120, 0.103);
+  margin-top: 20px; }
 
 .recipe img {
   border-radius: 15px;
@@ -270,12 +277,19 @@ a {
   height: 250px;
   width: 250px; }
 
+.signup form input, .signup form p {
+  font-family: 'Literata',serif; }
+
 .signup form input, .signup form p, #google-login {
   width: calc(100% - 10px);
   height: 35px;
   border-radius: 5px;
   border: 0.5px solid black;
   padding-left: 10px; }
+
+.signup-cont h2 {
+  margin-top: 20px;
+  font-family: 'Marcellus SC',serif; }
 
 .signup form input {
   background: #fafafa;
@@ -298,7 +312,8 @@ a {
 .signup form label {
   font-size: 15px;
   color: black;
-  font-weight: 500; }
+  font-weight: 500;
+  font-family: 'Literata',serif; }
 
 #submit {
   background: #f8f8f8;
@@ -307,7 +322,15 @@ a {
   border-radius: 5px;
   outline: none;
   border: none;
-  cursor: pointer;
+  cursor: pointer; }
+
+#submit:hover {
+  background: rgba(0, 0, 0, 0.2);
+  border-width: 0.5px;
+  border-style: solid;
+  border-color: #c6d0eb;
+  border-image: initial;
+  border-radius: 14px;
   transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) 0s; }
 
 #google-login {
@@ -323,10 +346,12 @@ a {
   margin-top: 15px;
   text-decoration: none; }
 
-/*
-#google-login:hover{  
-  transition-property: 
-*/
+#google-login:hover {
+  background: rgba(230, 75, 57, 0.8);
+  width: 260px;
+  padding: 10 10 10 10;
+  transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) 0s; }
+
 small {
   font-size: 15px;
   margin-top: 10px; }
@@ -336,5 +361,31 @@ small {
 
 .signup form :nth-child(3) {
   width: 100%; }
+
+.uk-alert-danger {
+  font-size: 20px;
+  border-radius: 10px;
+  text-align: center; }
+
+@media screen and (max-width: 768px) {
+  .signup-cont h2 {
+    font-size: 70px; }
+  .signup-cont {
+    width: 500px;
+    height: 750px; }
+  .uk-navbar-item {
+    width: 200px; }
+  .uk-flex {
+    padding-top: 0px;
+    align-items: center; }
+  .recipe {
+    margin-top: 40px;
+    padding-top: 40px;
+    padding-bottom: 50px;
+    font-size: 20px;
+    height: 300px;
+    object-fit: contain;
+    margin-top: 100px;
+    width: 50vw; } }
 
 /*# sourceMappingURL=style.css.map */
