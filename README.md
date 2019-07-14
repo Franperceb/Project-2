@@ -56,7 +56,7 @@ Our app is deployed with heroku.
 
 ## Checkout the app!
 
-You can access our app from you smartphone, tablet or computer! Click [here]().
+You can access our app from you smartphone, tablet or computer! Click [here](https://damp-caverns-97997.herokuapp.com/).
 
 
 ## Acknowledgments
