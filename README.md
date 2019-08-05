@@ -1,5 +1,4 @@
 # Recipes4You
-![image](public/images/Meltinpot.gif)
 
 By Jorge & Mariana
 
