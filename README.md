@@ -4,7 +4,7 @@ By Jorge & Mariana
 
 ## About :smiley:
 
-Recipes4You is a **responsive** web app that allows users to browse for online recipes, while beign able to take care of their health, as each recipe contains health, diet and caution labels, as well as calorie amount. 
+Recipes4You is a **responsive** web app that allows users to browse for online recipes, while beign able to take care of their health. Each recipe includes health, diet and caution labels, as well as calorie amount. 
 
 ### The structure
 
